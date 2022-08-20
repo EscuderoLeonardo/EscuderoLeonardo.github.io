@@ -17,6 +17,7 @@
 }
 
 .title {
+  font-size: large;
   color: white;
   margin-right: auto;
   margin-left: auto;
@@ -148,13 +149,18 @@ a, li {
   margin-top: 1rem;
 }
 
+.redes div {
+  display: flex;
+  gap: 2rem;
+}
+
 /*  ---------- INDEX ---------- */
 .body {
   background-image: radial-gradient(white, grey);
   width: 100%;
   display: grid;
   grid-template-areas: "header header header" "main main main " "ads-bar ads-bar ads-bar" "footer footer footer";
-  grid-template-rows: 310px auto auto 170px;
+  grid-template-rows: 290px auto auto 170px;
 }
 
 .main {
@@ -215,7 +221,7 @@ a, li {
   background-image: radial-gradient(white, grey);
   display: grid;
   grid-template-areas: "header" "main " "footer";
-  grid-template-rows: 310px auto 170px;
+  grid-template-rows: 290px auto 170px;
   height: 100vh;
 }
 
@@ -224,6 +230,9 @@ a, li {
   flex-direction: column;
   text-align: justify;
   align-items: center;
+}
+.contact h1, .cart-section h1, .specifications__intro h1 {
+  font-size: larger;
 }
 
 .form-contact {

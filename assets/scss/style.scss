@@ -15,7 +15,7 @@
     "main main main "
     "ads-bar ads-bar ads-bar"
     "footer footer footer";
-    grid-template-rows: 310px auto auto 170px;
+    grid-template-rows: 290px auto auto 170px;
 }
 
 .main{
@@ -81,13 +81,16 @@
     "header"
     "main "
     "footer";
-    grid-template-rows: 310px auto 170px;
+    grid-template-rows: 290px auto 170px;
     height: 100vh;
 }
 
 .contact{
     @include flex(column,justify);
     align-items: center;
+    h1{
+        font-size: larger
+    }
 }
 
 .form-contact{
