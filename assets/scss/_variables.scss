@@ -1,0 +1,12 @@
+$font-fa:Verdana, Geneva, Tahoma, sans-serif;
+$font-sz:large;
+
+$colors: (
+    color1: #232f3e,
+    color2: #232f3ec2,
+    color3: #eeeeee,
+);
+
+$color1: map-get($map:$colors , $key: color1);
+$color2: map-get($map:$colors , $key: color2);
+$color3: map-get($map:$colors , $key: color3);

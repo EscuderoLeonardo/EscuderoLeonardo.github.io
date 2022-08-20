@@ -1,0 +1,24 @@
+
+.footer{
+    background-color: $color1;
+    grid-area: footer;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 2rem;
+}
+
+.footer__div{    
+    margin-top: 0.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    gap: 0.2rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,220 @@
+@import "variables";
+@import "reset";
+@import "header";
+@import "footer";
+@import "mixins";
+
+/*  ---------- INDEX ---------- */
+
+.body{
+    background-image: radial-gradient(white,grey);
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main "
+    "ads-bar ads-bar ads-bar"
+    "footer footer footer";
+    grid-template-rows: 310px auto auto 170px;
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+}
+
+.categories{
+    display: none;
+}
+
+.products{  
+    @include flex(row,center);
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.item__detail{
+    text-decoration: none;
+    color: black;
+}
+
+.item{
+    width: 90%;
+    @include box(2rem auto 2rem auto)
+
+}
+
+.item__img{
+    width: 55%;
+    max-width: 250px;
+}
+
+.ads-bar-left{
+    display: none;
+}
+
+.ads-bar{
+    grid-area: ads-bar;
+    display: flex;
+    img{
+        max-width: 30%;
+        margin: 0 auto 1rem auto;
+    }
+}
+
+/* --------------- CONTACT ---------------  */
+
+.alternative-body{
+    background-color:  $color3;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main "
+    "footer";
+    grid-template-rows: 250px auto 170px;
+    height: 100vh;
+}
+
+.contact{
+    @include flex(column,justify);
+    align-items: center;
+}
+
+.form-contact{
+    @include box(0);
+    width: 90%;
+    max-width: 750px;
+    border-radius: 1rem;
+    input, textarea{
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------- items ---------------  */
+
+.main-item-detail{
+    display: flex;
+}
+
+.specifications{
+    @include flex(column,justify);
+    padding: 1rem;
+    gap: 1rem;
+    h2{
+        border-bottom: solid #507eb68e 0.1rem;
+    }
+}
+
+.specifications__intro{
+    @extend .contact;
+    margin-bottom: 1rem;
+}
+
+table{
+    width: 100%;
+}
+
+.tr{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tr-background{
+    @extend .tr;
+    background-color: #f5f5f5;
+}
+
+.price{
+    font-size: xx-large;
+    color: rgb(108, 108, 201);
+}
+
+/* ----------------------- Cart -----------------------  */
+
+.cart-section{
+    @extend .contact;
+    text-align: center;
+}
+
+.link{
+    color: blue;
+}
+
+.categories__list:hover{
+    background-color: $color3;
+}
+
+/* ----------------------- desktop -----------------------  */
+
+@media screen and (min-width: 1024px){
+
+    .nav__div ul{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .footer{
+        align-items: center;
+        justify-content: space-evenly;
+        height: 160px;        
+        img{
+            height: 8rem;
+            width: 8rem;
+        }
+    }
+
+    .ads-bar{
+        display: none;
+    }
+
+    .categories{
+        @include flex(column,justify);
+        @include box(4rem 0.5rem 2rem 0.5rem);
+        li{
+            margin: 1rem;
+        }
+        a{
+            color: black;
+        }
+    }
+
+    .item__img{
+        max-width: 15%;
+    }
+
+    .ads-bar-left{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+
+    .hamburguer-menu{
+        display: none;
+    }
+
+    .icon{
+        font-size: x-large;
+        transition: font-size 0.5s;
+        &:hover{
+            font-size: xx-large;
+        }
+    }
+
+    .nav__auth{
+        @include flex(row,justify);
+        button{
+            padding: 1rem;
+        }
+    }
+    
+    .redes i{
+        font-size: xx-large;
+    }
+}

@@ -1,0 +1,12 @@
+@mixin flex($direction, $type){
+    display: flex;
+    flex-direction: $direction;
+    text-align: $type;
+}
+
+@mixin box($margin){
+    background-color: white;
+    margin: $margin;
+    padding: 1rem;
+    box-shadow: 0px 1px 10px;
+}
