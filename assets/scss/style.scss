@@ -7,7 +7,7 @@
 /*  ---------- INDEX ---------- */
 
 .body{
-    background-image: radial-gradient(white,grey);
+    background-image: $background;
     width: 100%;
     display: grid;
     grid-template-areas: 
@@ -62,16 +62,26 @@
     }
 }
 
+/* --------------- ABOUT ---------------  */
+
+.about{
+    @extend .item;
+    p,div{
+    padding: 1rem;        
+    }
+
+}
+
 /* --------------- CONTACT ---------------  */
 
 .alternative-body{
-    background-color:  $color3;
+    background-image: $background;
     display: grid;
     grid-template-areas: 
     "header"
     "main "
     "footer";
-    grid-template-rows: 250px auto 170px;
+    grid-template-rows: 310px auto 170px;
     height: 100vh;
 }
 
@@ -88,6 +98,7 @@
     input, textarea{
         margin: 1rem 0;
         width: 100%;
+        max-width: 100%;
     }
 }
 

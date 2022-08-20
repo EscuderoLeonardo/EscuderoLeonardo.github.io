@@ -179,7 +179,7 @@ a, li {
   color: black;
 }
 
-.item {
+.item, .about {
   width: 90%;
   background-color: white;
   margin: 2rem auto 2rem auto;
@@ -205,12 +205,17 @@ a, li {
   margin: 0 auto 1rem auto;
 }
 
+/* --------------- ABOUT ---------------  */
+.about p, .about div {
+  padding: 1rem;
+}
+
 /* --------------- CONTACT ---------------  */
 .alternative-body {
-  background-color: #eeeeee;
+  background-image: radial-gradient(white, grey);
   display: grid;
   grid-template-areas: "header" "main " "footer";
-  grid-template-rows: 250px auto 170px;
+  grid-template-rows: 310px auto 170px;
   height: 100vh;
 }
 
@@ -233,6 +238,7 @@ a, li {
 .form-contact input, .form-contact textarea {
   margin: 1rem 0;
   width: 100%;
+  max-width: 100%;
 }
 
 .button-container {
