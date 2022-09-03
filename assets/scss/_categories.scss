@@ -1,0 +1,80 @@
+@import "variables";
+.hamburguer-menu{
+    cursor: pointer;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background:$color1;
+    height: 1000px;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        margin-right: auto;
+        margin-left: auto;
+        font-size: xx-large;
+        color: $color3;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    ul{
+        transform: translateY(15%);
+        a{
+            display: block;
+            text-decoration: none;
+            padding: 20px;
+            color: $color3;
+            border-left: 5px solid transparent;
+            &:active{
+                color: rgb(0, 0, 0);
+                background-color: $color3;
+
+            }
+        }
+    }
+    label{
+        position:absolute;
+        right: 5px;
+        top: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+}
+
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+
+
+
+.categories{
+    display: none;
+}

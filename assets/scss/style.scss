@@ -3,6 +3,7 @@
 @import "header";
 @import "footer";
 @import "mixins";
+@import "categories";
 
 /*  ---------- INDEX ---------- */
 
@@ -22,6 +23,11 @@
     grid-area: main;
     display: flex;
 }
+
+.hamburguer-menu{
+    cursor: pointer;
+}
+
 
 .categories{
     display: none;

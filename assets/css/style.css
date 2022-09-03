@@ -154,6 +154,82 @@ a, li {
   gap: 2rem;
 }
 
+.hamburguer-menu {
+  cursor: pointer;
+}
+
+#btn-menu {
+  display: none;
+}
+
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: #232f3e;
+  height: 1000px;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cont-menu h2 {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: xx-large;
+  color: #eeeeee;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.cont-menu ul {
+  transform: translateY(15%);
+}
+.cont-menu ul a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #eeeeee;
+  border-left: 5px solid transparent;
+}
+.cont-menu ul a:active {
+  color: rgb(0, 0, 0);
+  background-color: #eeeeee;
+}
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+.categories {
+  display: none;
+}
+
 /*  ---------- INDEX ---------- */
 .body {
   background-image: radial-gradient(white, grey);
@@ -166,6 +242,10 @@ a, li {
 .main {
   grid-area: main;
   display: flex;
+}
+
+.hamburguer-menu {
+  cursor: pointer;
 }
 
 .categories {
