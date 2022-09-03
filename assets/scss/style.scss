@@ -75,8 +75,25 @@
     p,div{
     padding: 1rem;        
     }
-
 }
+
+.text-bg{
+    background-color: $color3;
+}
+
+.alternative-body-about{
+    background-image: $background;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main "
+    "footer";
+    // grid-template-rows: 290px auto 170px;
+    grid-template-rows: 290px auto 170px;
+    // height: 100vh;
+}
+
+
 
 /* --------------- CONTACT ---------------  */
 
@@ -87,8 +104,9 @@
     "header"
     "main "
     "footer";
-    grid-template-rows: 290px auto 100px;
-    height: 100vh;
+    // grid-template-rows: 290px auto 170px;
+    grid-template-rows: 290px 5fr 1fr;
+    // height: 100vh;
 }
 
 .contact{
@@ -97,6 +115,7 @@
     h1{
         font-size: larger
     }
+    margin-top: 6rem;
 }
 
 .form-contact{
@@ -174,6 +193,18 @@ table{
 
 @media screen and (min-width: 1024px){
 
+
+
+    .alternative-body{
+        background-image: $background;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main "
+        "footer";
+        grid-template-rows: 290px auto 100px;
+        height: 100vh;
+    }
 
     .nav__link:hover{
         color: $color4;

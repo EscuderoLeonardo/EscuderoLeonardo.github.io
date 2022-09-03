@@ -292,13 +292,23 @@ a, li {
   padding: 1rem;
 }
 
+.text-bg {
+  background-color: #eeeeee;
+}
+
+.alternative-body-about {
+  background-image: radial-gradient(white, grey);
+  display: grid;
+  grid-template-areas: "header" "main " "footer";
+  grid-template-rows: 290px auto 170px;
+}
+
 /* --------------- CONTACT ---------------  */
 .alternative-body {
   background-image: radial-gradient(white, grey);
   display: grid;
   grid-template-areas: "header" "main " "footer";
-  grid-template-rows: 290px auto 100px;
-  height: 100vh;
+  grid-template-rows: 290px 5fr 1fr;
 }
 
 .contact, .cart-section, .specifications__intro {
@@ -306,6 +316,7 @@ a, li {
   flex-direction: column;
   text-align: justify;
   align-items: center;
+  margin-top: 6rem;
 }
 .contact h1, .cart-section h1, .specifications__intro h1 {
   font-size: larger;
@@ -384,6 +395,13 @@ table {
 
 /* ----------------------- desktop -----------------------  */
 @media screen and (min-width: 1024px) {
+  .alternative-body {
+    background-image: radial-gradient(white, grey);
+    display: grid;
+    grid-template-areas: "header" "main " "footer";
+    grid-template-rows: 290px auto 100px;
+    height: 100vh;
+  }
   .nav__link:hover {
     color: #e4e3b1;
   }
