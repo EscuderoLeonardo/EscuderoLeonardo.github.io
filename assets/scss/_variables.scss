@@ -6,8 +6,10 @@ $colors: (
     color1: #232f3e,
     color2: #232f3ec2,
     color3: #eeeeee,
+    color4: #e4e3b1,
 );
 
 $color1: map-get($map:$colors , $key: color1);
 $color2: map-get($map:$colors , $key: color2);
 $color3: map-get($map:$colors , $key: color3);
+$color4: map-get($map:$colors, $key: color4);

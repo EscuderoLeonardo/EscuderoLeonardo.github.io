@@ -64,12 +64,8 @@ i {
   gap: 0.25rem;
 }
 
-.nav__link {
-  transition: font-size 0.5s;
-}
-
-.nav__link:hover {
-  font-size: x-large;
+.nav__link:active {
+  color: #e4e3b1;
 }
 
 a, li {
@@ -301,7 +297,7 @@ a, li {
   background-image: radial-gradient(white, grey);
   display: grid;
   grid-template-areas: "header" "main " "footer";
-  grid-template-rows: 290px auto 170px;
+  grid-template-rows: 290px auto 100px;
   height: 100vh;
 }
 
@@ -388,6 +384,9 @@ table {
 
 /* ----------------------- desktop -----------------------  */
 @media screen and (min-width: 1024px) {
+  .nav__link:hover {
+    color: #e4e3b1;
+  }
   .nav__div ul {
     display: flex;
     gap: 2rem;
@@ -400,6 +399,9 @@ table {
   .footer img {
     height: 8rem;
     width: 8rem;
+  }
+  .footer a:hover {
+    color: #e4e3b1;
   }
   .ads-bar {
     display: none;

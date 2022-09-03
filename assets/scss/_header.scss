@@ -59,17 +59,9 @@ i{
     gap: 0.25rem;
 }
 
-
-.nav__link{
-    transition: font-size 0.5s;
+.nav__link:active{
+    color: $color4;
 }
-
-.nav__link:hover{
-    font-size: x-large;
-}
-
-
-
 
 a, li{
     text-decoration: none;
