@@ -67,6 +67,14 @@
         margin: 0 auto 1rem auto;
     }
 }
+.newsletter{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.1rem;
+    border: solid;
+    border-radius: 10px;
+    background-color: $color3;
+}
 
 /* --------------- ABOUT ---------------  */
 
@@ -88,9 +96,8 @@
     "header"
     "main "
     "footer";
-    // grid-template-rows: 290px auto 170px;
     grid-template-rows: 290px auto 170px;
-    // height: 100vh;
+
 }
 
 
@@ -104,9 +111,7 @@
     "header"
     "main "
     "footer";
-    // grid-template-rows: 290px auto 170px;
     grid-template-rows: 290px 5fr 1fr;
-    // height: 100vh;
 }
 
 .contact{
@@ -227,7 +232,7 @@ table{
             color: $color4;
         }
     }
-
+    
     .ads-bar{
         display: none;
     }
@@ -235,6 +240,7 @@ table{
     .categories{
         @include flex(column,justify);
         @include box(4rem 0.5rem 2rem 0.5rem);
+        justify-content:space-between;
         li{
             margin: 1rem;
         }
@@ -252,6 +258,18 @@ table{
         img{
             width: 100%;
         }
+        padding: 8rem 0 8rem 0;
+        border-top: solid;
+        border-bottom: solid;
+    }
+
+
+    .newsletter{
+        
+        padding: 1rem;
+        border: solid;
+        border-radius: 10px;
+        background-color: $color3;
     }
 
     .hamburguer-menu{
