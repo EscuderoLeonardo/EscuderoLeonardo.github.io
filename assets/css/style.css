@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -94,7 +95,6 @@ a, li {
   display: flex;
   align-items: center;
   border-radius: 4rem;
-  margin: 1rem 0 0.5 0;
 }
 .search-bar input {
   background-color: transparent;
@@ -130,11 +130,13 @@ a, li {
 }
 
 .footer__div {
-  margin-top: 0.5rem;
-  color: white;
   display: flex;
   flex-direction: column;
+  text-align: justify;
+  margin-top: 0.5rem;
+  color: white;
   align-items: center;
+  justify-content: center;
 }
 
 .redes {
@@ -487,6 +489,19 @@ table {
   }
   .redes i {
     font-size: xx-large;
+  }
+}
+/* ----------------------- resoluciones muy pequeñas... -----------------------  */
+@media screen and (max-width: 410px) {
+  .search-bar {
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    border-radius: 4rem;
+  }
+  .title {
+    font-size: medium;
   }
 }
 
